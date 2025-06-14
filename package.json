@@ -1,8 +1,8 @@
 {
-  "homepage": "https://stonehillcity.github.io/Stonehill-City/"
-  "name": "rest-express",
+  "name": "stonhill-city",
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://stonehillcity.github.io/Stonehill-City/",
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
