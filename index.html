@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرفر ستونهيل سيتي MTA - الموقع الرسمي</title>
+    <meta name="description" content="انضم إلى سيرفر ستونهيل سيتي MTA - تجربة الرول بلاي المثالية مع مجتمع محترف ولاعبين نشطين.">
+    <meta name="keywords" content="MTA, Multi Theft Auto, Stonehill City, Roleplay, Gaming Server, سيرفر">
+    <meta name="author" content="Stonehill City MTA">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="assets/logo.svg" alt="Stonehill City Logo">
+            </div>
+            <div class="loading-spinner"></div>
+            <p class="loading-text">جاري تحميل ستونهيل سيتي...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.svg" alt="Stonehill City" class="logo-img">
+                <span class="logo-text">Stonehill City</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" data-section="home">
+                        <i class="fas fa-home"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link" data-section="gallery">
+                        <i class="fas fa-images"></i>
+                        <span>معرض الصور</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#rules" class="nav-link" data-section="rules">
+                        <i class="fas fa-gavel"></i>
+                        <span>القوانين</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#download" class="nav-link" data-section="download">
+                        <i class="fas fa-download"></i>
+                        <span>التحميل</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>التواصل</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div id="particles-js"></div>
+            <div class="animated-bg"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-logo animate__animated animate__fadeInDown">
+                <img src="assets/logo.svg" alt="Stonehill City Logo">
+            </div>
+            <h1 class="hero-title animate__animated animate__fadeInUp">
+                مرحباً بكم في <span class="gradient-text">Stonehill City</span>
+            </h1>
+            <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                انطلق في رحلة ملحمية لا تُنسى واعيش تجربة رول بلاي استثنائية تفوق كل التوقعات
+            </p>
+            <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="mtasa://5.252.103.60:22000" class="btn btn-primary play-btn">
+                    <i class="fas fa-play"></i>
+                    <span>العب الآن</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="https://discord.gg/3SF5CQU6CX" target="_blank" class="btn btn-secondary discord-btn">
+                    <i class="fab fa-discord"></i>
+                    <span>انضم للديسكورد</span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>مرر للأسفل</span>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-images"></i></span>
+                معرض صور المدينة
+                <span class="title-underline"></span>
+            </h2>
+            <p class="section-subtitle">استكشف المناظر الخلابة لستونهيل سيتي</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="city">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-city"></i>
+                        <p>منطقة وسط المدينة</p>
+                        <span>المنطقة التجارية والأعمال</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>منطقة وسط المدينة</h3>
+                        <p>قلب التجارة والأعمال</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>المناطق السكنية</p>
+                        <span>منازل فاخرة وشقق راقية</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>المناطق السكنية</h3>
+                        <p>سكن راقي لجميع المواطنين</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="entertainment">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-gamepad"></i>
+                        <p>منطقة الترفيه</p>
+                        <span>نوادي وترفيه ومناطق التسلية</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>منطقة الترفيه</h3>
+                        <p>حيث تنبض المدينة بالحياة ليلاً</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="industrial">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-industry"></i>
+                        <p>المنطقة الصناعية</p>
+                        <span>مصانع ومستودعات</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>المنطقة الصناعية</h3>
+                        <p>العمود الفقري الاقتصادي للمدينة</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-tree"></i>
+                        <p>الطبيعة والحدائق</p>
+                        <span>مساحات خضراء وترفيه</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>الطبيعة والحدائق</h3>
+                        <p>ملاذات هادئة داخل المدينة</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="transport">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-car"></i>
+                        <p>مركز المواصلات</p>
+                        <span>طرق ومطارات ومحطات</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>مركز المواصلات</h3>
+                        <p>بنية تحتية متصلة للمدينة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="rules-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-gavel"></i></span>
+                قوانين الرول بلاي
+                <span class="title-underline"></span>
+            </h2>
+            <p class="section-subtitle">اتبع هذه التوجيهات للحصول على أفضل تجربة رول بلاي</p>
+            
+            <div class="rules-container">
+                <div class="rules-category">
+                    <div class="category-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>القوانين العامة</h3>
+                    </div>
+                    <div class="rules-list">
+                        <div class="rule-item">
+                            <span class="rule-number">1</span>
+                            <div class="rule-content">
+                                <h4>احترام جميع اللاعبين</h4>
+                                <p>تعامل مع جميع أعضاء المجتمع بالاحترام والأدب. ممنوع التحرش أو التمييز أو السلوك السيء.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-number">2</span>
+                            <div class="rule-content">
+                                <h4>البقاء في الشخصية</h4>
+                                <p>حافظ على الرول بلاي في جميع الأوقات. استخدم /ooc للتواصل خارج الشخصية عند الضرورة.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-number">3</span>
+                            <div class="rule-content">
+                                <h4>ممنوع الغش أو الاستغلال</h4>
+                                <p>أي شكل من أشكال الغش أو الهاكينغ أو استغلال آليات اللعبة ممنوع تماماً.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rules-category">
+                    <div class="category-header">
+                        <i class="fas fa-car"></i>
+                        <h3>قوانين السيارات</h3>
+                    </div>
+                    <div class="rules-list">
+                        <div class="rule-item">
+                            <span class="rule-number">4</span>
+                            <div class="rule-content">
+                                <h4>القيادة الواقعية</h4>
+                                <p>قد بطريقة واقعية وفقاً لشخصيتك ونوع السيارة. ممنوع التصادم أو الحركات غير الواقعية.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-number">5</span>
+                            <div class="rule-content">
+                                <h4>ملكية السيارات</h4>
+                                <p>استخدم فقط السيارات التي تملكها أو لديك إذن مناسب لاستخدامها.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rules-category">
+                    <div class="category-header">
+                        <i class="fas fa-handshake"></i>
+                        <h3>قوانين التفاعل</h3>
+                    </div>
+                    <div class="rules-list">
+                        <div class="rule-item">
+                            <span class="rule-number">6</span>
+                            <div class="rule-content">
+                                <h4>بداية الرول بلاي الصحيحة</h4>
+                                <p>ابدأ الرول بلاي دائماً بطريقة صحيحة قبل أي أعمال عدائية. أعط الآخرين فرصة للرد.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-number">7</span>
+                            <div class="rule-content">
+                                <h4>تقدير الحياة</h4>
+                                <p>شخصيتك تقدر حياتها. تصرف وفقاً لذلك في المواقف الخطيرة وخف على سلامتك.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rules-footer">
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>مخالفة هذه القوانين قد تؤدي إلى تحذيرات أو إيقاف مؤقت أو حظر دائم حسب درجة الخطورة.</p>
+                </div>
+                <a href="https://discord.gg/3SF5CQU6CX" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-discord"></i>
+                    <span>أبلغ عن المشاكل في الديسكورد</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-download"></i></span>
+                تحميل MTA
+                <span class="title-underline"></span>
+            </h2>
+            <p class="section-subtitle">احصل على Multi Theft Auto وانضم إلى سيرفرنا</p>
+            
+            <div class="download-content">
+                <div class="download-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>تحميل MTA:SA</h3>
+                            <p>حمل أحدث إصدار من Multi Theft Auto: San Andreas من الموقع الرسمي.</p>
+                            <a href="https://multitheftauto.com/" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                تحميل MTA:SA
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>تثبيت اللعبة</h3>
+                            <p>شغل ملف التثبيت واتبع معالج التثبيت. تأكد من أن لديك GTA: San Andreas مثبتة.</p>
+                            <div class="requirements">
+                                <h4>متطلبات النظام:</h4>
+                                <ul>
+                                    <li>Windows 7 أو أحدث</li>
+                                    <li>GTA: San Andreas</li>
+                                    <li>DirectX 9.0c أو أحدث</li>
+                                    <li>512MB ذاكرة RAM كحد أدنى</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>الاتصال بالسيرفر</h3>
+                            <p>شغل MTA:SA واتصل بسيرفرنا باستخدام عنوان IP أو الرابط المباشر أدناه.</p>
+                            <div class="server-info">
+                                <div class="info-item">
+                                    <span class="info-label">عنوان السيرفر:</span>
+                                    <span class="info-value" id="server-ip">5.252.103.60:22000</span>
+                                    <button class="copy-btn" onclick="copyToClipboard('5.252.103.60:22000')">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <a href="mtasa://5.252.103.60:22000" class="btn btn-secondary direct-connect">
+                                    <i class="fas fa-play"></i>
+                                    اتصال مباشر
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-help">
+                    <div class="help-box">
+                        <h3>تحتاج مساعدة؟</h3>
+                        <p>إذا واجهت أي مشاكل أثناء التثبيت أو الاتصال، لا تتردد في التواصل مع مجتمعنا للحصول على المساعدة.</p>
+                        <div class="help-links">
+                            <a href="https://discord.gg/3SF5CQU6CX" target="_blank" class="help-link">
+                                <i class="fab fa-discord"></i>
+                                <span>دعم الديسكورد</span>
+                            </a>
+                            <a href="https://wiki.multitheftauto.com/" target="_blank" class="help-link">
+                                <i class="fas fa-book"></i>
+                                <span>ويكي MTA</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-envelope"></i></span>
+                تواصل معنا
+                <span class="title-underline"></span>
+            </h2>
+            <p class="section-subtitle">تواصل مع مجتمعنا وابق على اطلاع</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3>مجتمع الديسكورد</h3>
+                        <p>انضم إلى سيرفر الديسكورد النشط للدردشة المباشرة والدعم والفعاليات المجتمعية.</p>
+                        <a href="https://discord.gg/3SF5CQU6CX" target="_blank" class="contact-link">
+                            <span>انضم للديسكورد</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h3>قناة اليوتيوب</h3>
+                        <p>اشترك في قناتنا على اليوتيوب لتحديثات السيرفر والدروس وفيديوهات اللعب.</p>
+                        <div class="contact-link disabled">
+                            <span>قريباً</span>
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>معلومات السيرفر</h3>
+                        <p>تفاصيل الاتصال المباشر للانضمام إلى سيرفر MTA الخاص بنا.</p>
+                        <div class="server-details">
+                            <div class="detail-item">
+                                <span class="detail-label">عنوان IP:</span>
+                                <span class="detail-value">5.252.103.60:22000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">اسم السيرفر:</span>
+                                <span class="detail-value">Stonehill City</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">نوع اللعب:</span>
+                                <span class="detail-value">Roleplay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-buttons">
+                        <a href="https://discord.gg/3SF5CQU6CX" target="_blank" class="social-btn discord">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                        <div class="social-btn youtube disabled">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube (Soon)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.svg" alt="Stonehill City">
+                    <h3>Stonehill City</h3>
+                    <p>The Ultimate Roleplay Experience</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Server</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#rules">Rules</a></li>
+                            <li><a href="#download">Download</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="https://discord.gg/3SF5CQU6CX" target="_blank">Discord</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="mtasa://5.252.103.60:22000">Play Now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stonehill City MTA Server. All rights reserved.</p>
+                <p>Not affiliated with Rockstar Games or Take-Two Interactive.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title">عنوان المنطقة</h2>
+                <button class="close-modal" onclick="closeGalleryModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modal-images" class="modal-images">
+                <!-- الصور ستضاف هنا -->
+            </div>
+            <div class="modal-description">
+                <p id="modal-description">وصف المنطقة</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
