@@ -346,13 +346,25 @@ galleryItems.forEach(item => {
 // Gallery Modal Functions
 function openGalleryModal(category) {
     console.log('Opening modal for category:', category); // للتشخيص
+    
+    // Wait for DOM to be fully loaded
+    if (document.readyState !== 'complete') {
+        window.addEventListener('load', () => openGalleryModal(category));
+        return;
+    }
+    
     const modal = document.getElementById('gallery-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalImages = document.getElementById('modal-images');
     const modalDescription = document.getElementById('modal-description');
     
     if (!modal || !modalTitle || !modalImages || !modalDescription) {
-        console.error('Modal elements not found');
+        console.error('Modal elements not found', {
+            modal: !!modal,
+            modalTitle: !!modalTitle,
+            modalImages: !!modalImages,
+            modalDescription: !!modalDescription
+        });
         return;
     }
     
@@ -416,16 +428,24 @@ function openGalleryModal(category) {
 
 function closeGalleryModal() {
     const modal = document.getElementById('gallery-modal');
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    if (modal) {
+        modal.style.display = 'none';
+        modal.style.opacity = '0';
+        document.body.style.overflow = 'auto';
+    }
 }
 
-// Close modal when clicking outside
-document.getElementById('gallery-modal').addEventListener('click', (e) => {
-    if (e.target.id === 'gallery-modal') {
-        closeGalleryModal();
+// Close modal when clicking outside - with proper check
+function setupModalEvents() {
+    const modal = document.getElementById('gallery-modal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target.id === 'gallery-modal') {
+                closeGalleryModal();
+            }
+        });
     }
-});
+}
 
 // Close modal with Escape key
 document.addEventListener('keydown', (e) => {
@@ -433,6 +453,9 @@ document.addEventListener('keydown', (e) => {
         closeGalleryModal();
     }
 });
+
+// Setup modal events when DOM is ready
+document.addEventListener('DOMContentLoaded', setupModalEvents);
 
 // Parallax Effect for Hero Background
 window.addEventListener('scroll', () => {
